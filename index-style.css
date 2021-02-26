@@ -1,68 +1,90 @@
-/* GRID */
-
-.wrapper {
-  background-color: #;
-  color: #;
+* {
+  box-sizing: border-box;
 }
-.wrapper {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-areas:
-    "header"
-    "sidebar"
-    "content"
-    "sidebar2"
-    "footer"
-}
-.header {
-  grid-area: header;
-}
-.sidebar {
-  grid-area: sidebar;
-}
-.content {
-  grid-area: content;
-}
-.sidebar2 {
-  grid-area: sidebar2;
-}
-.footer {
-  grid-area: footer;
-}
-@media only screen and (min-width: 500px)  {
-  .wrapper {
-    
-    grid-template-columns: 20% auto;
-    grid-template-areas:
-      "header    header"
-      "sidebar    content"
-      "sidebar2    sidebar2"
-      "footer    footer"
-  }
-}
-@media only screen and (min-width: 600px)   {
-  .wrapper {
-    grid-gap: 20px;
-    grid-template-columns: 120px auto 120px;
-    grid-template-areas:
-      "header    header    header"
-      "sidebar    content    sidebar2"
-      "footer    footer    footer"
-      max-width: 600px;
-  }
-}
-.box {
-  background-color: #;
-  color: #;
-  border-radius: 5px;
-  padding: 10px;
+body {
+  background-color: #000000;
   font-size: 17px;
+  font-family: 'Oxygen', sans-serif;
+  color:  #2BB9D6;
 }
-.header,
+/* FLEX CONTAINERS */
+
+.flex-container {
+  width: 100%;
+  display: flex;
+}
+.col-10 {
+  width: 10%;
+  padding: 5px 10px;
+}
+.col-25 {
+  width: 25%;
+  padding: 5px 10px;
+}
+.col-50 {
+  width: 50%;
+  padding: 5px 10px;
+}
+.col-75 {
+  width: 75%;
+  padding: 5px 10px;
+}
+
+/* TEXTBOX */
+
+.tb-blue {
+  background-color: #2BB9D6;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+}
+
+/* JUSTIFY CONTENT */
+
+.jc-evem {
+  justify-content: space-evenly;
+}
+.jc-around {
+  justify-content: space-around;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-center {
+  justify-content: center;
+}
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: #2B72D6;
+  transition: 0.3s;
+}
+a:hover {
+  color: #817281;
+}
+.navlink {
+  padding: 15px 150px;
+  border: 2px solid #000000;
+  transition: 0.3s;
+}
+.navlink:hover {
+  border: 2px solid #2BB9D6;
+}
+
+/* AREAS */
+
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 200px;
+}
 .footer {
-  background-color: #;
-}
-.sidebar2 {
-  background-color: #;
-  color: #;
+  height: 200px;
+  width: 100%;
+  background-color: #2BD643;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
